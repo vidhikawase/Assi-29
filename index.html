@@ -7,8 +7,10 @@
 </head>
 <style>
     body{
-        background-color: #0093E9;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+       
+        background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
         height: 100vh;
 
     }
@@ -18,11 +20,11 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        border: 2px solid black;
-        border-radius: 15px;
+    
         
     }
     .agecalculator{
+        
         font-size: 40px;
         display: flex;
         justify-content: center;
@@ -45,26 +47,36 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
-        text-decoration: underline;
+       
+    }
+    .result{
+        position: relative;
+        top: 100px;
+       right: 450px;
+        justify-content: center;
+    }
+    .heading{
+        position: relative;
+        top: 50px;
     }
 </style>
 <body>
-    <h1>Current Time</h1>
-    <div id="clock" class="Clock" onclick="Currenttime()"> 
-    </div>
-    <br><br>
+   
 
 
-    <h1>Age Calculator</h1>
+    <h1 class="heading">Age Calculator</h1>
     <div class="agecalculator" onclick="Agecalculator()">
-        <label for="birthday">Enter Your  Birthdate :- </label>&nbsp; &nbsp;
+        <label for="birthday">Enter Your Date OF Birth :- </label>&nbsp; &nbsp;
         <input type="date" id="birthday" name="birthday" class="date">&nbsp; &nbsp;
         <br>
         <button class="btn-age" onclick="Agecalculator()">Calculate Your Age</button>
         <br>
-        <p id="result">Result</p>
+       <h3 class="result"> <p id="result">Result</p></h3>
     </div>
-
+    <h1>Current Time</h1>
+    <div id="clock" class="Clock" onclick="Currenttime()"> 
+    </div>
+    <br><br>
     <script>
         function  Currenttime(){
             const date = new Date();
